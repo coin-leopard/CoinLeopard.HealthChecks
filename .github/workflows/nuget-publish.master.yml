@@ -23,13 +23,13 @@ jobs:
         id: package_version
         uses: kzrnm/get-net-sdk-project-versions-action@v1.1.1
         with:
-          proj-path: src/CoinLeopard.DB.Extensions.PostgreSQL/CoinLeopard.DB.Extensions.PostgreSQL.csproj
+          proj-path: src/CoinLeopard.HealthChecks/CoinLeopard.HealthChecks.csproj
 
       - name: Build
         run: dotnet build --configuration 'Release'
 
       - name: Pack
-        run: nuget pack ./src/CoinLeopard.DB.Extensions.PostgreSQL/CoinLeopard.DB.Extensions.PostgreSQL.nuspec -p version=${{ steps.package_version.outputs.version }}
+        run: nuget pack ./src/CoinLeopard.HealthChecks/CoinLeopard.HealthChecks.nuspec -p version=${{ steps.package_version.outputs.version }}
 
       - name: Push
         run: nuget push *.nupkg -src "https://nuget.pkg.github.com/coin-leopard/index.json" -ApiKey ${{ secrets.PAT }}
