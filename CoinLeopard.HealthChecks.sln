@@ -5,19 +5,23 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{86C7DFC8-8673-403F-811B-1F545CBF0DA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinLeopard.HealthChecks", "src\CoinLeopard.HealthChecks\CoinLeopard.HealthChecks.csproj", "{7FDFB9C1-AAF1-4659-AB92-B818F81A867C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinLeopard.HealthChecks", "src\CoinLeopard.HealthChecks\CoinLeopard.HealthChecks.csproj", "{7FDFB9C1-AAF1-4659-AB92-B818F81A867C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F4CCCA1F-993D-4C8E-8653-B30C3FC2DECB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinLeopard.HealthChecks.Tests", "tests\CoinLeopard.HealthChecks.Tests\CoinLeopard.HealthChecks.Tests.csproj", "{F6E28962-C3B0-456D-AC97-AA27AC6B9685}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinLeopard.HealthChecks.Tests", "tests\CoinLeopard.HealthChecks.Tests\CoinLeopard.HealthChecks.Tests.csproj", "{F6E28962-C3B0-456D-AC97-AA27AC6B9685}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{063AADC6-0BAD-4A85-AC08-86A7FEEF6C46}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\nuget-publish.dev.yml = .github\workflows\nuget-publish.dev.yml
+		.github\workflows\nuget-publish.master.yml = .github\workflows\nuget-publish.master.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7FDFB9C1-AAF1-4659-AB92-B818F81A867C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -29,8 +33,14 @@ Global
 		{F6E28962-C3B0-456D-AC97-AA27AC6B9685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6E28962-C3B0-456D-AC97-AA27AC6B9685}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7FDFB9C1-AAF1-4659-AB92-B818F81A867C} = {86C7DFC8-8673-403F-811B-1F545CBF0DA2}
 		{F6E28962-C3B0-456D-AC97-AA27AC6B9685} = {F4CCCA1F-993D-4C8E-8653-B30C3FC2DECB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {470006F8-B37D-48D3-A4D3-40CA68E855CC}
 	EndGlobalSection
 EndGlobal
