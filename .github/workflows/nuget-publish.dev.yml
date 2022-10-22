@@ -1,0 +1,36 @@
+name: Nuget-Dev
+
+on:
+  push:
+    branches: [development]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Nuget
+        uses: nuget/setup-nuget@v1
+        with:
+          nuget-version: "5.x"
+
+      - name: Get Version
+        id: package_version
+        uses: kzrnm/get-net-sdk-project-versions-action@v1.1.1
+        with:
+          proj-path: src/CoinLeopard.DB.Extensions.PostgreSQL/CoinLeopard.DB.Extensions.PostgreSQL.csproj
+
+      - name: Build
+        run: dotnet build --configuration 'Release'
+      - name: Pack
+        run: nuget pack ./src/CoinLeopard.DB.Extensions.PostgreSQL/CoinLeopard.DB.Extensions.PostgreSQL.nuspec -p version=${{ steps.package_version.outputs.version }}-${{ github.run_number }}
+
+      - name: Push
+        run: nuget push *.nupkg -src "https://nuget.pkg.github.com/coin-leopard/index.json" -ApiKey ${{ secrets.PAT }}

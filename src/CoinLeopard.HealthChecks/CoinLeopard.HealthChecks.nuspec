@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+	<metadata>
+		<id>CoinLeopard.HealthChecks</id>
+		<version>$version$</version>
+		<title>CoinLeopard.HealthChecks</title>
+		<authors>AT Jevon</authors>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<repository type="git" url="https://github.com/coin-leopard/CoinLeopard.HealthChecks.git"></repository>
+		<projectUrl>https://github.com/coin-leopard/CoinLeopard.HealthChecks/</projectUrl>
+		<description>CoinLeopard .Net health check extensions</description>
+		<dependencies>
+			<dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.2.0"></dependency>
+		</dependencies>
+	</metadata>
+</package>
