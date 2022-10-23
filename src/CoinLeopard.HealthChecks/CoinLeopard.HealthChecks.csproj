@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Version>0.0.1</Version>
+		<Version>0.0.2</Version>
 		<Title>CoinLeopard.HealthChecks</Title>
 		<Authors>AT Jevon</Authors>
 		<Description>CoinLeopard .Net health check extensions</Description>

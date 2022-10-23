@@ -14,4 +14,7 @@
 			<dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.2.0"></dependency>
 		</dependencies>
 	</metadata>
+	<files>
+		<file src="bin\Release\net6.0\CoinLeopard.HealthChecks.dll" target="lib\net6.0" />
+	</files>
 </package>

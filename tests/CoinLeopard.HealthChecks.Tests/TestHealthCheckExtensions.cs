@@ -12,7 +12,7 @@ public class TestHealthCheckExtensions
 
     public TestHealthCheckExtensions() { }
 
-    private static WebApplication _app;
+    private static WebApplication? _app;
 
     private void CreateTestServer(string appName, string? basePath = null)
     {
@@ -27,8 +27,8 @@ public class TestHealthCheckExtensions
 
     private async Task StopServerASync()
     {
-        await _app.StopAsync();
-        await _app.DisposeAsync();
+        await _app!.StopAsync();
+        await _app!.DisposeAsync();
     }
 
     [Fact]
